@@ -1,0 +1,234 @@
+{
+  "Routes": [
+
+    //Seller API's port 5002
+
+    //sellerList
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{version}/seller/GetSeller",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sellerapi20221106232209.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{version}/SellerService/GetSeller",
+      "UpstreamHttpMethod": "GET",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GatewayAuthenticationKey",
+        "AllowedScopes": []
+      },
+      "RouteIsCaseSensitive": false,
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    }, //productList
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{version}/seller/GetProducts",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sellerapi20221106232209.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{version}/SellerService/GetProducts",
+      "UpstreamHttpMethod": "GET",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GatewayAuthenticationKey",
+        "AllowedScopes": []
+      },
+      "RouteIsCaseSensitive": false,
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    }, //biddingList
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{version}/seller/GetBidDetails",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sellerapi20221106232209.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{version}/SellerService/GetBidDetails",
+      "UpstreamHttpMethod": "GET",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GatewayAuthenticationKey",
+        "AllowedScopes": []
+      },
+      "RouteIsCaseSensitive": false,
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    }, //show-bids
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{version}/seller/show-bids/{productId}",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sellerapi20221106232209.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{version}/SellerService/show-bids/{productId}",
+      "UpstreamHttpMethod": "GET",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GatewayAuthenticationKey",
+        "AllowedScopes": []
+      },
+      "RouteIsCaseSensitive": false,
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    }, //delete-product
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{version}/seller/delete/{productId}",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "DELETE",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sellerapi20221106232209.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{version}/SellerService/delete/{productId}",
+      "UpstreamHttpMethod": "DELETE",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GatewayAuthenticationKey",
+        "AllowedScopes": []
+      },
+      "RouteIsCaseSensitive": false,
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    }, //add-product
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{version}/seller/Add-product",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "POST",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sellerapi20221106232209.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{version}/SellerService/Add-product",
+      "UpstreamHttpMethod": "POST",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GatewayAuthenticationKey",
+        "AllowedScopes": []
+      },
+      "RouteIsCaseSensitive": false
+    },
+    //Buyer API's port 5001
+    //biddingList
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{version}/buyer",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "buyerapi20221106233653.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{version}/BuyerService",
+      "UpstreamHttpMethod": "GET",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GatewayAuthenticationKey",
+        "AllowedScopes": []
+      },
+      "RouteIsCaseSensitive": false,
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    }, //place-bid
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{version}/buyer/place-bid",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "POST",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "buyerapi20221106233653.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{version}/BuyerService/place-bid",
+      "UpstreamHttpMethod": "POST",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GatewayAuthenticationKey",
+        "AllowedScopes": []
+      },
+      "RouteIsCaseSensitive": false
+    }, //update-bid
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{version}/buyer/Update-bid/{productId}/{buyerEmailId}/{newBidAmount}",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "PUT",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "buyerapi20221106233653.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{version}/BuyerService/Update-bid/{productId}/{buyerEmailId}/{newBidAmount}",
+      "UpstreamHttpMethod": "PUT",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GatewayAuthenticationKey",
+        "AllowedScopes": []
+      },
+      "RouteIsCaseSensitive": false
+    }
+    //added
+    ,
+    {
+      "DownstreamPathTemplate": "/api/auth/authenticate",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "POST",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "https://apigateway20221107103510.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/auth/authenticate",
+      "UpstreamHttpMethod": "POST",
+      "RouteIsCaseSensitive": false
+    }
+    //added
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://apigateway20221107103510.azurewebsites.net" //"http://localhost:5000"
+  }
+}
